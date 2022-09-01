@@ -1,0 +1,56 @@
+<main>
+    <div class="section mt-5">
+        <div class="container">
+            <div class="justify-content-center row">
+                <div class="col-lg-5 col-xxl-4">
+                    <div class="card">
+                        <div class="card-header bg-transparent py-3">
+                            <h3 class="h4 mb-0 text-center">Add Product </h3>
+                        </div>
+                        <div class="card-body">
+                            <form [formGroup]="regForm">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="form-group mb-3">
+                                            <label for="product name" class="form-label">Product Name<span class="text-danger">*</span></label>
+                                            <input type="text" formControlName="productName" class="form-control" placeholder="Product Name">
+                                            <small *ngIf="regForm.get('productName').invalid && regForm.get('productName').touched " class="text-danger">Enter The Product Name </small>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="form-group mb-3">
+                                            <label for="product Id" class="form-label">Product Id <span class="text-danger">*</span></label>
+                                            <input type="text" formControlName="productId" class="form-control" placeholder="Product Id">
+                                            <small *ngIf="regForm.get('productId').invalid && regForm.get('productId').touched " class="text-danger">Enter The Product Id </small>
+                                        </div>
+                                    </div>
+                                </div> -->
+
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="form-group mb-3">
+                                            <label for="email_1" class="form-label">Available Quantity <span class="text-danger">*</span></label>
+                                            <input type="text" formControlName="availableQuantity" class="form-control" placeholder="Available Quantity">
+                                            <small *ngIf="regForm.get('availableQuantity').invalid && regForm.get('availableQuantity').touched " class="text-danger">Enter The Available Quantity </small>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="form-group text-center">
+                                            <button type="submit" (click)="userSub()" [disabled]="regForm.invalid" class="btn btn-primary w-100">Submit</button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
